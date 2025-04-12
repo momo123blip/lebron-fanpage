@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LeBron James Fan Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1e1e1e;
+      color: #f5f5f5;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #ffcc00;
+      font-size: 3rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    .bio {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    .link-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>LeBron James Fan Page 👑</h1>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Lebron_James_Lakers.jpg" alt="LeBron James">
+  
+  <div class="bio">
+    <p>LeBron James, also known as "King James", is one of the greatest basketball players of all time. With multiple NBA championships, MVP awards, and a legendary career that continues to inspire, LeBron is more than an athlete — he's a global icon, philanthropist, and leader.</p>
+    <p>Whether you're a longtime fan or just getting to know his greatness, this page is for celebrating everything LeBron!</p>
+  </div>
+
+  <a class="link-button" href="https://www.nba.com/player/2544/lebron-james" target="_blank">View LeBron's NBA Profile</a>
+</body>
+</html>
