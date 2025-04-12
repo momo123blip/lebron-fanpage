@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basketball Game: Lakers vs. Heat</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.8rem;
+      color: #ffcc00;
+    }
+    .teams {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      margin: 2rem 0;
+    }
+    .team {
+      background: #1e1e1e;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
+    }
+    .team h2 {
+      font-size: 2rem;
+    }
+    .score {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .countdown {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      color: #ccc;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 12px 24px;
+      background-color: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lakers vs. Heat</h1>
+
+  <div class="teams">
+    <div class="team">
+      <h2>🏀 Lakers</h2>
+      <div class="score">102</div>
+    </div>
+    <div class="team">
+      <h2>🔥 Heat</h2>
+      <div class="score">98</div>
+    </div>
+  </div>
+
+  <div class="countdown">
+    Tip-off in: <span id="timer">Loading...</span>
+  </div>
+
+  <a href="#" class="btn">Buy Tickets</a>
+
+  <script>
+    // Countdown to future date (e.g. game start)
+    const futureDate = new Date();
+    futureDate.setHours(futureDate.getHours() + 5); // 5 hours from now
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = futureDate - now;
+      if (diff <= 0) {
+        document.getElementById("timer").innerText = "Game in Progress!";
+        return;
+      }
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      document.getElementById("timer").innerText = `${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
